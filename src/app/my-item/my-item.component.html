@@ -1,0 +1,22 @@
+<!-- <h1>{{myProduct.name}}</h1>
+<h2>{{myProduct.price}}</h2>
+<h2>{{myProduct.description}}</h2> -->
+
+<!-- <ul>
+    <li *ngFor = "let pr of myProducts">
+        <h3>{{pr.name}}</h3>
+        <h3>{{pr.price}}</h3>
+        <h3>{{pr.description}}</h3>
+    </li>
+</ul> -->
+
+<div *ngFor = "let pr of myProducts" >
+    <h3 (click) = "showProductDetails (pr)">{{pr.name}}</h3>
+    <div *ngIf = "selectedProduct === pr">
+        <!-- <h3>{{selectedProduct.name}}</h3>
+        <h3>{{selectedProduct.price}}</h3>
+        <h3>{{selectedProduct.description}}</h3> -->
+        <p>Description: {{pr.description}}</p>
+        <p>Price: {{pr.price}}</p>
+    </div>
+</div>
