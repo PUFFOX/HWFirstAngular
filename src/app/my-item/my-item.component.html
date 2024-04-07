@@ -13,9 +13,7 @@
 <div *ngFor = "let pr of myProducts" >
     <h3 (click) = "showProductDetails (pr)">{{pr.name}}</h3>
     <div *ngIf = "selectedProduct === pr">
-        <!-- <h3>{{selectedProduct.name}}</h3>
-        <h3>{{selectedProduct.price}}</h3>
-        <h3>{{selectedProduct.description}}</h3> -->
+
         <p>Description: {{pr.description}}</p>
         <p>Price: {{pr.price}}</p>
     </div>
